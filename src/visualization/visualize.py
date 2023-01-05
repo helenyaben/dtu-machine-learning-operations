@@ -1,25 +1,25 @@
-import torch
-import click
-
 import importlib.util
-import sys
 import os
+import sys
+
+import click
+import torch
+
 # Import model class
 spec = importlib.util.spec_from_file_location("mnist", os.path.join('src', 'models', 'model.py'))
 foo = importlib.util.module_from_spec(spec)
 sys.modules["mnist"] = foo
 spec.loader.exec_module(foo) 
 
-import matplotlib.pyplot as plt 
-from matplotlib.pyplot import show
-
-from torch.utils.data import Dataset
 from typing import Tuple
-from torch.utils.data import DataLoader
 
-from sklearn.manifold import TSNE
-import seaborn as sns
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
+from matplotlib.pyplot import show
+from sklearn.manifold import TSNE
+from torch.utils.data import DataLoader, Dataset
+
 
 # 1. Subclass torch.utils.data.Dataset
 class ImageFolderCustom(Dataset):

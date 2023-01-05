@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-import click
 import logging
-from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
-import torch
-import numpy as np
-from torch.utils.data import Dataset
-from typing import Tuple, Dict, List
-from torch.utils.data import DataLoader
-from torchvision import datasets, transforms
 import os
+from pathlib import Path
+from typing import Dict, List, Tuple
+
+import click
+import numpy as np
+import torch
+from dotenv import find_dotenv, load_dotenv
+from torch.utils.data import DataLoader, Dataset
+from torchvision import datasets, transforms
 
 
 def load_data(data_paths):

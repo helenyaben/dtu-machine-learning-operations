@@ -1,22 +1,17 @@
-import torch
-import click
-
-from model import MyAwesomeModel
-
-from torch import nn
-import torch.nn.functional as F
-from torch import nn, optim
-
-import matplotlib.pyplot as plt 
-from matplotlib.pyplot import show
-
-from torch.utils.data import Dataset
+import os
 import pathlib
-from typing import Tuple, Dict, List
-from torch.utils.data import DataLoader
+from typing import Dict, List, Tuple
+
+import click
+import matplotlib.pyplot as plt
+import torch
+import torch.nn.functional as F
+from matplotlib.pyplot import show
+from model import MyAwesomeModel
+from torch import nn, optim
+from torch.utils.data import DataLoader, Dataset
 from torchvision import datasets, transforms
 
-import os
 
 # 1. Subclass torch.utils.data.Dataset
 class ImageFolderCustom(Dataset):
