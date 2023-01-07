@@ -48,7 +48,7 @@ class ImageFolderCustom(Dataset):
         return img, class_idx # return data, label (X, y)
 
 @click.command()
-@click.option("--checkpoint", default=os.path.join('src', 'models', 'my_trained_model.pt'), help='Path to file with state dict of the model')
+@click.option("--checkpoint", default=os.path.join('models', 'my_trained_model.pt'), help='Path to file with state dict of the model')
 def evaluate(checkpoint):
 
     print("Predicting day and night")

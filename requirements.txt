@@ -17,3 +17,5 @@ matplotlib
 scikit-learn
 seaborn
 pandas
+dvc
+dvc[gdrive]

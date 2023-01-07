@@ -91,7 +91,7 @@ def train(lr):
         train_losses.append(epoch_losses/len(trainloader))
         print(f"Train loss in epoch {e}: {epoch_losses/len(trainloader)}")
 
-    torch.save(model.state_dict(), os.path.join('src', 'models','my_trained_model.pt')) 
+    torch.save(model.state_dict(), os.path.join('models','my_trained_model.pt')) 
     
     plt.plot(train_losses)
     show()
