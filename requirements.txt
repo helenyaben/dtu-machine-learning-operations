@@ -19,3 +19,5 @@ seaborn
 pandas
 dvc
 dvc[gdrive]
+pytest
+wandb
