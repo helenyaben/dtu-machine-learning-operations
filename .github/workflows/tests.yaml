@@ -14,12 +14,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
+      
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    
+
     - name: Get pip cache dir
       id: pip-cache
       run: |
@@ -45,10 +45,9 @@ jobs:
       env:
         GDRIVE_CREDENTIALS_DATA: ${{secrets.GDRIVE_CREDENTIALS_DATA}}
 
-    - name: Set up wandb
-      env :
-        WANDB_API_KEY: ${{secrets.WANDB_API_KEY}}
     - name: Test with pytest
       run: |
         pip install pytest
         pytest -v
+      env :
+        WANDB_API_KEY: ${{secrets.WANDB_API_KEY}}
